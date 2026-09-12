@@ -4,10 +4,11 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = whatever
 
 SRCS = main.cpp
+INCLUDES = whatever.hpp
 
 all: $(NAME)
 	
-$(NAME): $(SRCS)
+$(NAME): $(SRCS) $(INCLUDES)
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 clean:
