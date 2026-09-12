@@ -35,6 +35,8 @@
 *.lib
 
 # Executables
+whatever
+iter
 *.exe
 *.out
 *.app
