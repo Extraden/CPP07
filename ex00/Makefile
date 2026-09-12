@@ -14,7 +14,7 @@ $(NAME): $(SRCS) $(INCLUDES)
 clean:
 
 fclean: clean
-	rm -rf whatever
+	rm -rf $(NAME)
 
 re: fclean all
 
