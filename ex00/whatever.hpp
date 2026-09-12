@@ -1,3 +1,6 @@
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
+
 template <typename T>
 void	swap(T& x, T& y)
 {
@@ -21,3 +24,5 @@ T	min(T x, T y)
 		return x;
 	return y;
 }
+
+#endif
