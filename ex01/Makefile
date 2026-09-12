@@ -1,16 +1,16 @@
 NAME = iter
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 
 SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
-INCLUDES = iter.hpp
+DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(INCLUDES)
-		   $(CXX) $(CXXFLAGS) $< -o $@
+$(NAME): $(OBJS)
+		   $(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -24,3 +24,5 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
+-include $(DEPS)
