@@ -1,15 +1,15 @@
 NAME = array
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRCS = main.cpp
-INCLUDES = Array.hpp
+INCLUDES = Array.hpp Array.tpp
 
 all: $(NAME)
 
 $(NAME): $(SRCS) $(INCLUDES)
-	$(CXX) $(CXXFLAGS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(SRCS) -o $(NAME)
 
 clean:
 
