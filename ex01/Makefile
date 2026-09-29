@@ -8,7 +8,7 @@ SRCS = main.cpp
 all: $(NAME)
 
 $(NAME): $(SRCS) iter.hpp
-		   $(CXX) $(CXXFLAGS) $(SRCS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(SRCS) -o $(NAME)
 
 clean:
 
