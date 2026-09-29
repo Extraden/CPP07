@@ -41,7 +41,7 @@ Array<T>::~Array()
 }
 
 template <typename T>
-T& Array<T>::operator[](const unsigned long index)
+T& Array<T>::operator[](std::size_t index)
 {
   if (index >= length)
     throw std::exception();
@@ -49,7 +49,7 @@ T& Array<T>::operator[](const unsigned long index)
 }
 
 template <typename T>
-const T& Array<T>::operator[](const unsigned long index) const
+const T& Array<T>::operator[](std::size_t index) const
 {
   if (index >= length)
     throw std::exception();

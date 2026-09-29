@@ -13,8 +13,8 @@ class Array
     Array<T>& operator=(const Array<T>& other);
     ~Array();
 
-    T& operator[](const unsigned long index);
-    const T& operator[](const unsigned long index) const;
+    T& operator[](std::size_t index);
+    const T& operator[](std::size_t index) const;
     std::size_t size() const;
 
   private:
