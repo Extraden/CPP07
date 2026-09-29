@@ -4,11 +4,11 @@ CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRCS = main.cpp
-INCLUDES = Array.hpp Array.tpp
+HEADERS = Array.hpp Array.tpp
 
 all: $(NAME)
 
-$(NAME): $(SRCS) $(INCLUDES)
+$(NAME): $(SRCS) $(HEADERS)
 	$(CXX) $(CXXFLAGS) $(SRCS) -o $(NAME)
 
 clean:
