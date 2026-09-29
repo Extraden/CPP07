@@ -1,7 +1,7 @@
 #include <iostream>
 #include "iter.hpp"
 
-void  print(char const& c)
+void  print(const char& c)
 {
   std::cout << c << "\n";
 }
