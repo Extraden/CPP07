@@ -4,11 +4,10 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp
-INCLUDES = iter.hpp
 
 all: $(NAME)
 
-$(NAME): $(SRCS) $(INCLUDES)
+$(NAME): $(SRCS) iter.hpp
 		   $(CXX) $(CXXFLAGS) $(SRCS) -o $(NAME)
 
 clean:
